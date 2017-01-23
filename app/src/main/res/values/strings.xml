@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Blank Daydream</string>
+    <string name="app_description">The Blank Daydream app is designed to provide a way
+        to blank the screen when in Daydream (screen saver) mode. It was created so
+        that music may be played when falling asleep, without having the distraction
+        of a glowing screen.</string>
+    <string name="dream_now">Dream Now</string>
+    <string name="button_settings">Daydream Settings</string>
+</resources>
