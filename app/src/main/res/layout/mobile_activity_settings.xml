@@ -19,8 +19,7 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppThemeMobile.PopupOverlay"
             app:title="@string/app_name"
-            app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-            app:titleTextColor="@color/md_primary_text_dark" />
+            app:titleTextAppearance="@style/ToolbarText" />
 
     </android.support.design.widget.AppBarLayout>
 
@@ -55,9 +54,9 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/fab_margin"
         android:clipChildren="false"
-        android:clipToPadding="false">
+        android:clipToPadding="false"
+        android:padding="@dimen/fab_margin">
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
@@ -70,13 +69,13 @@
 
         <TextView
             android:id="@+id/fabtext"
+            style="@style/FabText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/fab"
             android:layout_alignTop="@id/fab"
             android:layout_marginEnd="@dimen/fab_mini_margin"
             android:layout_toStartOf="@id/fab"
-            android:gravity="center_vertical"
             android:text="@string/dream_now" />
 
         <android.support.design.widget.FloatingActionButton
@@ -92,13 +91,13 @@
 
         <TextView
             android:id="@+id/fab2text"
+            style="@style/FabText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/fab2"
             android:layout_alignTop="@id/fab2"
             android:layout_marginEnd="@dimen/fab_mini_margin"
             android:layout_toStartOf="@id/fab2"
-            android:gravity="center_vertical"
             android:text="@string/button_settings" />
 
     </RelativeLayout>

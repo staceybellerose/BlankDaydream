@@ -2,5 +2,6 @@
     <color name="colorPrimary">@color/md_green_500</color>
     <color name="colorPrimaryDark">@color/md_green_800</color>
     <color name="colorAccent">@color/md_amber_A400</color>
-    <color name="background">@color/md_grey_800</color>
+    <color name="colorAccentDark">@color/md_amber_A700</color>
+    <color name="colorBackgroundLeanback">@color/md_grey_900</color>
 </resources>

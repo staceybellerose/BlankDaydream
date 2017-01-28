@@ -4,6 +4,6 @@
         to blank the screen when in Daydream (screen saver) mode. It was created so
         that music may be played when falling asleep, without having the distraction
         of a glowing screen.</string>
-    <string name="dream_now">Dream Now</string>
-    <string name="button_settings">Daydream Settings</string>
+    <string name="dream_now">Start Now</string>
+    <string name="button_settings">Settings</string>
 </resources>

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="AppThemeBase" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+        <item name="android:textColorPrimary">@color/md_primary_text_light</item>
     </style>
 
     <style name="AppThemeMobile" parent="AppThemeBase" />
@@ -16,20 +17,36 @@
     <style name="AppThemeMobile.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="AppThemeLeanbackBase" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:background">@color/background</item>
-        <item name="android:textColor">@color/md_primary_text_dark</item>
-        <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/md_primary_text_dark</item>
+        <item name="android:background">@color/colorBackgroundLeanback</item>
     </style>
 
     <style name="AppThemeLeanback" parent="AppThemeLeanbackBase" />
 
-    <style name="TextAppearance" parent="TextAppearance.AppCompat" />
-
-    <style name="TextAppearance.FabText" parent="Widget.AppCompat.Button">
-        <!--
+    <style name="ButtonStyleLeanback" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/md_primary_text_light</item>
-        <item name="android:padding">4dp</item>
-        <item name="android:background">@android:color/white</item>
-        -->
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:drawablePadding">@dimen/internal_margin</item>
+        <item name="android:background">@drawable/button_material</item>
+    </style>
+
+    <style name="LeanbackBorder">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="FabText" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="ToolbarText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/md_primary_text_dark</item>
+    </style>
+
+    <style name="HeaderText" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:gravity">center</item>
     </style>
 </resources>

@@ -5,4 +5,15 @@
     <dimen name="internal_margin">16dp</dimen>
     <dimen name="fab_margin">32dp</dimen>
     <dimen name="fab_mini_margin">8dp</dimen>
+    <dimen name="internal_margin_leanback">32dp</dimen>
+
+    <!-- insets (outer padding) around buttons -->
+    <dimen name="button_inset_vertical_material">4dp</dimen>
+    <dimen name="button_inset_horizontal_material">4dp</dimen>
+    <!-- inner padding within buttons -->
+    <dimen name="button_padding_vertical_material">4dp</dimen>
+    <dimen name="button_padding_horizontal_material">8dp</dimen>
+    <!-- rounded corner for buttons -->
+    <dimen name="button_corner_material">2dp</dimen>
+
 </resources>

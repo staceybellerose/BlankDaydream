@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:background="@drawable/background"
+    android:orientation="horizontal"
+    tools:context=".LeanbackBlankDreamSettingsActivity">
+
+    <View
+        style="@style/LeanbackBorder"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@color/colorBackgroundLeanback"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/internal_margin_leanback"
+        android:paddingStart="@dimen/internal_margin_leanback"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/header"
+            style="@style/HeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:drawableStart="@drawable/banner"/>
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/internal_margin_leanback"
+            android:paddingTop="@dimen/internal_margin_leanback"
+            android:text="@string/app_description" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+            <Button
+                android:id="@+id/buttonDream"
+                style="@style/ButtonStyleLeanback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_sleep_black_24dp"
+                android:text="@string/dream_now" />
+
+            <Button
+                android:id="@+id/buttonSettings"
+                style="@style/ButtonStyleLeanback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:drawableEnd="@drawable/ic_settings_black_24dp"
+                android:text="@string/button_settings" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/LeanbackBorder"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/button_highlight" />
+        </shape>
+    </item>
+    <item>
+        <inset
+            android:insetBottom="2dp"
+            android:insetLeft="2dp"
+            android:insetRight="2dp"
+            android:insetTop="2dp">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/colorBackgroundLeanback" />
+            </shape>
+        </inset>
+    </item>
+    <item>
+        <inset
+            android:insetBottom="@dimen/button_inset_vertical_material"
+            android:insetLeft="@dimen/button_inset_horizontal_material"
+            android:insetRight="@dimen/button_inset_horizontal_material"
+            android:insetTop="@dimen/button_inset_vertical_material">
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/button_corner_material" />
+                <solid android:color="@color/button_background" />
+                <padding
+                    android:bottom="@dimen/button_padding_vertical_material"
+                    android:left="@dimen/button_padding_horizontal_material"
+                    android:right="@dimen/button_padding_horizontal_material"
+                    android:top="@dimen/button_padding_vertical_material" />
+            </shape>
+        </inset>
+    </item>
+</layer-list>

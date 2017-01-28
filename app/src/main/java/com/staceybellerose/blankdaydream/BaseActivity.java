@@ -1,6 +1,7 @@
 package com.staceybellerose.blankdaydream;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
@@ -26,7 +27,13 @@ public abstract class BaseActivity extends AppCompatActivity {
         } else {
             intent = new Intent(Settings.ACTION_DISPLAY_SETTINGS);
         }
-        startActivity(intent);
-
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            // unable to call the internal Settings page
+            // call the standard Settings page
+            intent = new Intent(Settings.ACTION_SETTINGS);
+            startActivity(intent);
+        }
     }
 }
