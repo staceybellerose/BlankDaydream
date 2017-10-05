@@ -42,8 +42,8 @@
     <rule ref="rulesets/java/naming.xml">
         <!-- Android is designed this way -->
         <exclude name="LongVariable" />
-        <!--
         <exclude name="AbstractNaming" />
+        <!--
         <exclude name="ShortMethodName" />
         <exclude name="ShortVariable" />
         <exclude name="VariableNamingConventions" />

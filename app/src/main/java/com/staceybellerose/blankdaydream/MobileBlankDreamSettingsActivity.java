@@ -10,25 +10,46 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * Settings Activity for Mobile environment (phones, tablets, etc, not for Android TV)
+ */
 public class MobileBlankDreamSettingsActivity extends BaseActivity {
 
+    /**
+     * Button to start dreaming immediately
+     */
     @BindView(R.id.fab)
     FloatingActionButton mFab;
 
+    /**
+     * Button to open Settings activity
+     */
     @BindView(R.id.fab2)
     FloatingActionButton mFab2;
 
+    /**
+     * Label for Start Dreaming Button
+     */
     @BindView(R.id.fabtext)
     TextView mFabText;
 
+    /**
+     * Label for Settings Button
+     */
     @BindView(R.id.fab2text)
     TextView mFab2Text;
 
+    /**
+     * Set of animations used to open/display the FAB buttons
+     */
     private AnimatorSet mAnimatorSet = new AnimatorSet();
+    /**
+     * Flag to indicate whether the FAB buttons are displayed
+     */
     private boolean mFabButtonsOpen;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mobile_activity_settings);
         ButterKnife.bind(this);
@@ -65,6 +86,9 @@ public class MobileBlankDreamSettingsActivity extends BaseActivity {
         }
     }
 
+    /**
+     * onClick method for Start Dreaming FAB button
+     */
     @OnClick(R.id.fab)
     public void processFab() {
         if (mFabButtonsOpen) {
@@ -75,17 +99,26 @@ public class MobileBlankDreamSettingsActivity extends BaseActivity {
         }
     }
 
+    /**
+     * onClick method for Settings FAB button
+     */
     @OnClick(R.id.fab2)
     public void processFab2() {
         startDreamSettings();
     }
 
+    /**
+     * Open/display the FAB buttons so they are tappable
+     */
     private void openFab() {
         mFab.setImageResource(R.drawable.ic_sleep_black_24dp);
         mAnimatorSet.start();
         mFabButtonsOpen = true;
     }
 
+    /**
+     * Close the FAB buttons so they are inactive
+     */
     private void closeFab() {
         mFab.setImageResource(R.drawable.ic_plus_black_24dp);
         mFab2.setAlpha(0f);

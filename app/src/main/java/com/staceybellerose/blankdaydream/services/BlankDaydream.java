@@ -4,6 +4,9 @@ import android.service.dreams.DreamService;
 
 import com.staceybellerose.blankdaydream.R;
 
+/**
+ * Daydream Service which simply displays a blank screen
+ */
 public class BlankDaydream extends DreamService {
     @Override
     public void onDetachedFromWindow() {

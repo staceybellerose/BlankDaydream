@@ -4,9 +4,16 @@ import android.content.Intent;
 import android.os.Build;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
+/**
+ * Abstract class for Daydream Activities
+ */
 public abstract class BaseActivity extends AppCompatActivity {
 
+    /**
+     * Start Daydreaming now
+     */
     protected void startDreaming() {
         final Intent intent = new Intent(Intent.ACTION_MAIN);
         try {
@@ -14,11 +21,14 @@ public abstract class BaseActivity extends AppCompatActivity {
             intent.setClassName("com.android.systemui", "com.android.systemui.Somnambulator");
             startActivity(intent);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e("BlankDaydream", "Unable to start dreaming - is the Intent still valid?", e);
             // TODO report crash to developer
         }
     }
 
+    /**
+     * Call the Daydream Settings Activity
+     */
     protected void startDreamSettings() {
         Intent intent;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
