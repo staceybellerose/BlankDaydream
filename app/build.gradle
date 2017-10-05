@@ -13,9 +13,18 @@ android {
         versionName "1.0.1"
 
     }
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -23,17 +32,11 @@ android {
         }
     }
     applicationVariants.all { variant ->
-        def appName = parent.name
-
         variant.outputs.each { output ->
-            def newApkName = "${appName}-${output.baseName}-v${variant.versionName}.apk"
-            output.outputFile = new File(output.outputFile.parent, newApkName)
-
-            def task = project.tasks.create("copy${variant.name}ApkToFolder", Copy)
-            task.from(output.outputFile.parent)
-            task.into(buildDir.parent + "/../apk")
-            task.include(newApkName)
-            variant.assemble.finalizedBy task
+            def file = output.outputFile
+            def appName = rootProject.ext.appName
+            def fileName = appName + "-" + variant.buildType.name + "-v" + variant.versionName + ".apk"
+            output.outputFile = new File(file.parent, fileName)
         }
     }
 }
