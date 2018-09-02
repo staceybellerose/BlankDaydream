@@ -5,6 +5,7 @@ Blank Daydream
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/staceybellerose/BlankDaydream/master/LICENSE)
 [![Android](https://img.shields.io/badge/platform-android-green.svg)](https://developer.android.com/develop/index.html)
 [![Latest Version](https://img.shields.io/github/release/staceybellerose/BlankDaydream.svg)](https://github.com/staceybellerose/BlankDaydream/releases)
+[![Known Vulnerabilities](https://snyk.io/test/github/staceybellerose/BlankDaydream/badge.svg?targetFile=build.gradle)](https://snyk.io/test/github/staceybellerose/BlankDaydream?targetFile=build.gradle)
 
 The **Blank Daydream** Android app is designed for Android TV to provide a way
 to blank the screen when in Daydream (screen saver) mode. It was created so
