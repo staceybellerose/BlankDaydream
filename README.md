@@ -12,6 +12,10 @@ to blank the screen when in Daydream (screen saver) mode. It was created so
 that music may be played from the TV when falling asleep, without having the
 distraction of a glowing screen. This app also runs on mobile devices.
 
+The app is available for download on Google Play.
+
+<a href='https://play.google.com/store/apps/details?id=com.staceybellerose.blankdaydream&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width='323px' height='125px'/></a>
+
 License
 =======
 
@@ -28,3 +32,5 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+Google Play and the Google Play logo are trademarks of Google LLC.
